@@ -12,8 +12,6 @@
 /build
 /dist
 /html-report
-# Ignore everything in React Apps                                                                                                                
-/React Apps/*
 
 # misc
 .DS_Store

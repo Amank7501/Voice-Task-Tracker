@@ -8,7 +8,12 @@ export const parseVoice = async (req, res) => {
 
     const parsed = await parseVoiceText(text);
     res.status(200).json(parsed);
-  } catch (err) {
-    res.status(500).json({ error: "Failed to parse voice input" });
+  } 
+  catch (error) {
+  console.error("Voice parsing error:", error.message);
+  res.status(500).json({
+    error: "Failed to parse voice input",
+    details: error.message
+  });
   }
 };
